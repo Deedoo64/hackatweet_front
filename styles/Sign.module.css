@@ -3,7 +3,7 @@
   width: 40px;
   margin-top: 20px;
 }
-.signUpContainer {
+.container {
   background-color: #161f2d;
   height: 50vh;
   width: 50vw;
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
 }
-.signUp {
+.main {
   margin: auto;
   display: flex;
   position: relative;
@@ -24,7 +24,7 @@
   opacity: 1;
   text-align: center;
 }
-.titleSignUp {
+.title {
   color: white;
 }
 .registerSection {
@@ -42,7 +42,7 @@
   border: 0.5px white solid;
   color: white;
 }
-.btnSignUp2 {
+.btnSign {
   height: 40px;
   width: 250px;
   border-radius: 20px;

@@ -19,10 +19,10 @@ function Sign(props) {
   };
 
   return (
-    <div className={styles.signUp}>
-      <div className={styles.signUpContainer}>
+    <div className={styles.main}>
+      <div className={styles.container}>
         <img className={styles.logo} src="logo.png" alt="logo twitter" />
-        <h3 className={styles.titleSignUp}>{title}</h3>
+        <h3 className={styles.title}>{title}</h3>
         <div className={styles.registerSection}>
           {props.action === SIGN_UP && (
             <input
@@ -51,8 +51,8 @@ function Sign(props) {
             value={password}
           />
         </div>
-        <button className={styles.btnSignUp2}>{buttonName}</button>
-        <button className={styles.btnSignUp2} onClick={onClose}>
+        <button className={styles.btnSign}>{buttonName}</button>
+        <button className={styles.btnSign} onClick={onClose}>
           Close
         </button>
       </div>
