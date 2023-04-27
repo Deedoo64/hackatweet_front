@@ -47,7 +47,7 @@ function Sign(props) {
           setFirstName("");
           setUserName("");
           props.closeAction(props.action);
-        }
+        } else alert(data.error);
       });
   };
 
