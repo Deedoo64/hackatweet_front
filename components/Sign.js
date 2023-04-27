@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SIGN_UP, SIGN_IN, FETCH_API } from "../modules/common";
 import { login, logout } from "../reducers/user";
-
+import { useRouter } from "next/router";
 function Sign(props) {
   const dispatch = useDispatch();
-
+  const router = useRouter();
   const [firstname, setFirstName] = useState("");
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -47,6 +47,7 @@ function Sign(props) {
           setFirstName("");
           setUserName("");
           props.closeAction(props.action);
+          router.push("/home");
         } else alert(data.error);
       });
   };
