@@ -4,8 +4,12 @@ function SignIn() {
   return (
     <div>
       <main className={styles.main}>
-        <h1 className={styles.title}></h1>
+        <h1 className={styles.title}>
+          SSSSSSSIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNSSSSSSSSS
+        </h1>
       </main>
     </div>
   );
 }
+
+export default SignIn;

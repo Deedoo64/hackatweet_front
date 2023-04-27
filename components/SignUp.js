@@ -36,6 +36,7 @@ function SignUp() {
           />
         </div>
         <button className={styles.btnSignUp2}>Sign Up</button>
+        <button className={styles.btnSignUp2}>Close</button>
       </div>
     </div>
   );
