@@ -1,10 +1,12 @@
 .loginContainer {
   /* background-color: #161f2d; */
+  position: absolute;
   width: 100vw;
   min-height: 100vh;
   margin: 0;
   display: flex;
   background-color: #161f2d;
+  z-index: 1;
 }
 .leftContainer {
   border: 0.5 black solid;
@@ -66,9 +68,15 @@
   align-items: center;
 }
 .signUp {
+  margin: auto;
   display: flex;
-
+  position: relative;
   justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 10%;
+  opacity: 1;
+  text-align: center;
 }
 .titleSignUp {
   color: white;
