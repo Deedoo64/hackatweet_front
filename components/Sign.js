@@ -1,8 +1,12 @@
 import styles from "../styles/Sign.module.css";
 import { useEffect, useState } from "react";
-import { SIGN_UP, SIGN_IN } from "../modules/common";
+import { useDispatch, useSelector } from "react-redux";
+import { SIGN_UP, SIGN_IN, FETCH_API } from "../modules/common";
+import { login, logout } from "../reducers/user";
 
 function Sign(props) {
+  const dispatch = useDispatch();
+
   const [firstname, setFirstName] = useState("");
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +20,35 @@ function Sign(props) {
 
   const onClose = () => {
     props.closeAction(props.action);
+  };
+
+  const onSign = () => {
+    if (props.action === SIGN_UP) return doSignUp();
+
+    doSignIn();
+  };
+
+  const doSignIn = () => {};
+
+  const doSignUp = () => {
+    fetch(FETCH_API + "/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstname: firstname,
+        username: username,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result) {
+          dispatch(login({ username: username, token: data.token }));
+          setFirstName("");
+          setUserName("");
+          props.closeAction(props.action);
+        }
+      });
   };
 
   return (
@@ -53,7 +86,9 @@ function Sign(props) {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
-          <button className={styles.btnSign}>{buttonName}</button>
+          <button className={styles.btnSign} onClick={onSign}>
+            {buttonName}
+          </button>
         </div>
       </div>
     </div>
