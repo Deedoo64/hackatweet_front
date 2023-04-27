@@ -11,15 +11,7 @@ function Login() {
   const [signUpVisible, setSignUpVisible] = useState(false);
   const [signInVisible, setSignInVisible] = useState(false);
 
-  console.log(
-    "Login  : signUpVisible : ",
-    signUpVisible,
-    "signIn visible",
-    signInVisible
-  );
-
   const handleModal = (action) => {
-    console.log("Asko for ", action);
     if (action === SIGN_UP) setSignUpVisible(!signUpVisible);
     else setSignInVisible(!signInVisible);
   };
