@@ -1,0 +1,53 @@
+.logo {
+  height: 30px;
+  width: 40px;
+  margin-top: 20px;
+}
+.signUpContainer {
+  background-color: #161f2d;
+  height: 50vh;
+  width: 50vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.signUp {
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 10%;
+  opacity: 1;
+  text-align: center;
+}
+.titleSignUp {
+  color: white;
+}
+.registerSection {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+.inputField {
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: transparent;
+  border: 0.5px white solid;
+  color: white;
+}
+.btnSignUp2 {
+  height: 40px;
+  width: 250px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

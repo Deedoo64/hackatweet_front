@@ -1,4 +1,4 @@
-import styles from "../styles/Login.module.css";
+import styles from "../styles/Sign.module.css";
 import { useEffect, useState } from "react";
 import { SIGN_UP, SIGN_IN } from "../modules/common";
 
