@@ -52,3 +52,8 @@
 .textAlready {
   color: white;
 }
+.logo {
+  height: 30px;
+  width: 40px;
+  margin-top: 20px;
+}

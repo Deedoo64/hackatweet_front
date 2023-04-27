@@ -4,14 +4,14 @@
   margin-top: 20px;
 }
 .container {
-  background-color: #161f2d;
   height: 50vh;
   width: 50vw;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  background-color: #161f2d;
 }
 .main {
   margin: auto;
@@ -50,4 +50,12 @@
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.btnClose {
+  color: white;
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
+  margin-left: 90%;
+  margin-top: 2%;
 }

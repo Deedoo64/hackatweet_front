@@ -21,6 +21,9 @@ function Sign(props) {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
+        <span className={styles.btnClose} onClick={onClose}>
+          X
+        </span>
         <img className={styles.logo} src="logo.png" alt="logo twitter" />
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.registerSection}>
@@ -44,17 +47,14 @@ function Sign(props) {
           />
           <input
             className={styles.inputField}
-            type="text"
+            type="password"
             placeholder="Password"
             id="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
+          <button className={styles.btnSign}>{buttonName}</button>
         </div>
-        <button className={styles.btnSign}>{buttonName}</button>
-        <button className={styles.btnSign} onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );
