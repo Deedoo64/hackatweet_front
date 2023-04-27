@@ -19,12 +19,13 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   flex-direction: column;
   padding-left: 40px;
 }
 .title {
   color: white;
+  font-size: 70px;
 }
 .otherTitle {
   color: white;
@@ -35,13 +36,64 @@
   border-radius: 30px;
   border: none;
   background-color: #409af0;
+  color: white;
 }
 .btnSignIn {
   height: 50px;
   width: 200px;
   border-radius: 30px;
   border: 2px white;
+  background-color: transparent;
+  border: 2px white solid;
+  color: white;
 }
 .textAlready {
   color: white;
+}
+.logo {
+  height: 30px;
+  width: 40px;
+  margin-top: 20px;
+}
+.signUpContainer {
+  background-color: #161f2d;
+  height: 50vh;
+  width: 50vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.signUp {
+  display: flex;
+
+  justify-content: center;
+}
+.titleSignUp {
+  color: white;
+}
+.registerSection {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+.inputField {
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: transparent;
+  border: 0.5px white solid;
+  color: white;
+}
+.btnSignUp2 {
+  height: 40px;
+  width: 250px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
