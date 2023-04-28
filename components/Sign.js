@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SIGN_UP, SIGN_IN, FETCH_API } from "../modules/common";
 import { login, logout } from "../reducers/users";
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"; // To change current page
 
 function Sign(props) {
   const dispatch = useDispatch();
