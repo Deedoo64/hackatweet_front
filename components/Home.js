@@ -6,10 +6,12 @@ import { logout } from "../reducers/users";
 import { useEffect, useState } from "react";
 import { FETCH_API } from "../modules/common";
 import { useRouter } from "next/router";
+import moment from "moment";
 
 function Home() {
   const userName = useSelector((state) => state.users.value.username);
   const router = useRouter(); // To change current page
+  const [tweetsData, setTweetsData] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -19,6 +21,7 @@ function Home() {
       .then((data) => {
         console.log("All tweets");
         console.log(data.tweets);
+        setTweetsData(data.tweets);
       });
   }, []);
 
@@ -26,6 +29,23 @@ function Home() {
     dispatch(logout());
     router.push("/"); // Return to the index page
   };
+
+  const buildTweetsJSX = () => {
+    console.log("Total tweets length : ", tweetsData.length);
+    return tweetsData.map((data, i) => {
+      // const isBookmarked = bookmarks.some(
+      //   (bookmark) => bookmark.title === data.title
+      // );
+      const startTime = moment(data.date).format();
+      const endTime = moment(Date.now()).format();
+      const duration = moment.duration(moment(endTime).diff(startTime));
+      const hours = duration.asHours();
+
+      return <TweetItem key={i} from={hours} {...data} />;
+    });
+  };
+
+  const tweeters = buildTweetsJSX();
 
   return (
     <div className={styles.main}>
@@ -50,9 +70,7 @@ function Home() {
       <div className={styles.tweet}>
         <Tweet></Tweet>
       </div>
-      <div className={styles.lasttweet}>
-        <TweetItem />
-      </div>
+      <div className={styles.lasttweet}>{tweeters}</div>
       <div className={styles.trend}></div>
     </div>
   );
