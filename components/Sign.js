@@ -28,7 +28,26 @@ function Sign(props) {
     doSignIn();
   };
 
-  const doSignIn = () => {};
+  const doSignIn = () => {
+    fetch(FETCH_API + "/users/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result) {
+          dispatch(login({ username: username, token: data.token }));
+
+          setUserName("");
+          props.closeAction(props.action);
+          router.push("/home");
+        } else alert(data.error);
+      });
+  };
 
   const doSignUp = () => {
     fetch(FETCH_API + "/users/signup", {
