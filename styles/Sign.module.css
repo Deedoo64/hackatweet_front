@@ -56,7 +56,7 @@
 .btnClose {
   color: white;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   cursor: pointer;
   margin-left: 90%;
   margin-top: 2%;
