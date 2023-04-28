@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  border: 1px white solid;
+  border: 0.2px white solid;
 }
 .tweet {
   grid-column-start: 4;
@@ -24,7 +24,7 @@
   grid-row-start: 1;
   grid-row-end: 5;
   /* background-color: red; */
-  border: 1px white solid;
+  border: 0.2px white solid;
 }
 .lasttweet {
   grid-column-start: 4;
@@ -32,7 +32,7 @@
   grid-row-start: 5;
   grid-row-end: 14;
   /* background-color: yellow; */
-  border: 1px white solid;
+  border: 0.2px white solid;
 }
 .trend {
   grid-column-start: 10;
@@ -40,7 +40,7 @@
   grid-row-start: 1;
   grid-row-end: 14;
   /* background-color: pink; */
-  border: 1px white solid;
+  border: 0.2px white solid;
 }
 .logo {
   height: 7%;
@@ -54,9 +54,8 @@
   /* height: 10%; */
   height: 3em;
   border-radius: 50%;
-  background-color: pink;
+
   /* margin-left: 10%; */
-  background-color: red;
 }
 .userContainer {
   /* width: 100%; */

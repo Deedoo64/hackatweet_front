@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Tweet from "./Tweet";
+import TweetItem from "./TweetItem";
 
 function Home() {
   return (
@@ -11,13 +12,21 @@ function Home() {
 
         <div className={styles.userContainer}>
           <img className={styles.oeuf} src="oeuf.png" alt="logo oeuf" />
-          <span>John</span>
+          <div>
+            <span>John</span>
+            <br />
+            <span>@JohnCena</span>
+          </div>
         </div>
+
+        <button className={styles.btn}> logout </button>
       </div>
       <div className={styles.tweet}>
         <Tweet></Tweet>
       </div>
-      <div className={styles.lasttweet}></div>
+      <div className={styles.lasttweet}>
+        <TweetItem />
+      </div>
       <div className={styles.trend}></div>
     </div>
   );
