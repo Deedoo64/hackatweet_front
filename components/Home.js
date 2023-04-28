@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import Login from "./Login";
+import Tweet from "./Tweet";
 
 function Home() {
   return (
@@ -14,8 +14,9 @@ function Home() {
           <span>John</span>
         </div>
       </div>
-
-      <div className={styles.tweet}></div>
+      <div className={styles.tweet}>
+        <Tweet></Tweet>
+      </div>
       <div className={styles.lasttweet}></div>
       <div className={styles.trend}></div>
     </div>

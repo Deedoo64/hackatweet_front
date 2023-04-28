@@ -1,0 +1,17 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #bdcbe3;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  color: white;
+}
+
+.footer {
+  display: flex;
+}
