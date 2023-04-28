@@ -33,6 +33,7 @@
   grid-row-end: 14;
   /* background-color: yellow; */
   border: 0.2px #4a5564 solid;
+  overflow: auto;
 }
 .trend {
   grid-column-start: 10;
