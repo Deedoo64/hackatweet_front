@@ -11,7 +11,7 @@ function Home() {
 
         <div className={styles.userContainer}>
           <img className={styles.oeuf} src="oeuf.png" alt="logo oeuf" />
-          <h2>John</h2>
+          <span>John</span>
         </div>
       </div>
 
