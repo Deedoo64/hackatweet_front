@@ -1,8 +1,11 @@
 .main {
   height: 30%;
   display: flex;
-  background-color: red;
+  /* background-color: red; */
   padding: 10px;
+  flex-direction: column;
+  border-bottom: 0.5px #4a5564 solid;
+  overflow: auto;
 }
 .oeuf {
   /* height: 10%; */
@@ -43,8 +46,13 @@
   margin-top: 28px;
   color: #4a5564;
 }
-.footer {
+
+.text {
+  color: white;
+}
+.coeur {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
+  cursor: pointer;
+  margin-right: 620px;
 }
