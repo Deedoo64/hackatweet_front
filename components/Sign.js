@@ -2,8 +2,9 @@ import styles from "../styles/Sign.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SIGN_UP, SIGN_IN, FETCH_API } from "../modules/common";
-import { login, logout } from "../reducers/user";
+import { login, logout } from "../reducers/users";
 import { useRouter } from "next/router";
+
 function Sign(props) {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -40,7 +41,9 @@ function Sign(props) {
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {
-          dispatch(login({ username: username, token: data.token }));
+          dispatch(
+            login({ username: username, token: data.token, id: data.id })
+          );
 
           setUserName("");
           props.closeAction(props.action);
@@ -62,7 +65,9 @@ function Sign(props) {
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {
-          dispatch(login({ username: username, token: data.token }));
+          dispatch(
+            login({ username: username, token: data.token, id: data.userId })
+          );
           setFirstName("");
           setUserName("");
           props.closeAction(props.action);
