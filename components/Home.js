@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { FETCH_API } from "../modules/common";
 import { useRouter } from "next/router";
 import moment from "moment";
+import HashtagItem from "./HashtagItem";
 
 function Home() {
   const userName = useSelector((state) => state.users.value.username);
@@ -71,7 +72,10 @@ function Home() {
         <Tweet></Tweet>
       </div>
       <div className={styles.lasttweet}>{tweeters}</div>
-      <div className={styles.trend}></div>
+      <div className={styles.trend}>
+        {" "}
+        <HashtagItem></HashtagItem>{" "}
+      </div>
     </div>
   );
 }
