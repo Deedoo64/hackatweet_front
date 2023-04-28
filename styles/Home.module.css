@@ -46,7 +46,7 @@
   height: 7%;
   /* margin-top: 10%; */
   /* margin-left: 10%; */
-  background-color: green;
+  /* background-color: green; */
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -63,4 +63,17 @@
   display: flex;
   /* justify-content: space-around; */
   align-items: center;
+  margin-left: 30px;
+  color: white;
+  justify-content: center;
+  margin-top: 100px;
+}
+.btn {
+  background-color: transparent;
+  margin-bottom: 50px;
+  color: white;
+  border: 0.5px white solid;
+  border-radius: 20px;
+  margin-left: 40px;
+  width: 20%;
 }
